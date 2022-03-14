@@ -22,20 +22,20 @@
         embedded_svc.settings.entryFeature = 'LiveAgent';            
 
         embedded_svc.init(
-            'https://underarmour--uat.my.salesforce.com',
-            'https://uat-underarmour-site.cs123.force.com/supportsite',
-            gslbBaseURL,
-            '00D3I0000000TUR',
-            'Chat_US',
-            {
-                baseLiveAgentContentURL: 'https://c.la1-c1cs-ia4.salesforceliveagent.com/content',
-                deploymentId: '5723I0000008OS0',
-                buttonId: '5733I0000008OYC',
-                baseLiveAgentURL: 'https://d.la1-c1cs-ia4.salesforceliveagent.com/chat',
-                eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3I00000000EcUAI_17f4266e357',
-                isOfflineSupportEnabled: false
-            }
-        );
+			'https://underarmour--sfscdev.my.salesforce.com',
+			'https://sfscdev-underarmour.cs214.force.com/uahelp',
+			gslbBaseURL,
+			'00D790000008fkB',
+			'Chat_US',
+			{
+				baseLiveAgentContentURL: 'https://c.la5-c1cs-ia5.salesforceliveagent.com/content',
+				deploymentId: '57279000000CaRM',
+				buttonId: '57379000000GmaY',
+				baseLiveAgentURL: 'https://d.la5-c1cs-ia5.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I790000004C9rEAE_17d7ff00933',
+				isOfflineSupportEnabled: true
+			}
+		);
     };
 
     if (!window.embedded_svc) {
