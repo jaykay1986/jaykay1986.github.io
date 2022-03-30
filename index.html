@@ -61,6 +61,101 @@
 	} else {
 		initESW('https://service.force.com');
 	}
+	
+	embedded_svc.settings.extraPrechatFormDetails = [{
+    "label": "RecordTypeId",
+    "value": "01279000000GqnWAAS",
+    "displayToAgent": true
+},
+{
+    "label": "CaseStatus",
+    "value": "New",
+    "displayToAgent": true
+}];
+
+
+embedded_svc.settings.extraPrechatInfo = [{
+     "entityName": "Contact",
+                //"saveToTranscript":"ContactId",
+                "showOnCreate":true,
+                "linkToEntityName": "Case",
+                "linkToEntityField": "ContactId",
+                "entityFieldMaps": [{
+                    "fieldName": "FirstName", 
+                    "label": "First Name",
+                    "doFind": "true",
+                    "isExactMatch": "true",
+                    "doCreate": "true"
+                    }, {
+                    "fieldName": "LastName",
+                    "label": "Last Name",
+                    "doFind": "true",
+                    "isExactMatch": "true",
+                    "doCreate": "true"
+                    }, {
+                    "fieldName": "Email",
+                    "label": "Email",
+                    "doFind": "true",
+                    "isExactMatch": "true",
+                    "doCreate": "true"
+                    
+                    },
+                    {
+                    "fieldName": "RecordTypeId",
+                    "label": "RecordTypeId",
+                    "doFind": "false",
+                    "isExactMatch": "false",
+                    "doCreate": "true"
+                    }]
+},
+
+{
+    "entityName": "Account",
+                "saveToTranscript":"AccountId",
+                "showOnCreate":true,
+                "linkToEntityName": "Case",
+                "linkToEntityField": "AccountId",
+                "entityFieldMaps": [{
+                    "fieldName": "PersonEmail", 
+                    "label": "Email",
+                    "doFind": "true",
+                    "isExactMatch": "true",
+                    "doCreate": "true"
+                    }, {
+                    "fieldName": "FirstName",
+                    "label": "First Name",
+                    "doFind": "false",
+                    "isExactMatch": "false",
+                    "doCreate": "true"
+                    }, {
+                    "fieldName": "LastName",
+                    "label": "Last Name",
+                    "doFind": "false",
+                    "isExactMatch": "false",
+                    "doCreate": "true"
+                    }, {
+                    "fieldName": "RecordTypeId",
+                    "label": "RecordTypeId",
+                    "doFind": "false",
+                    "isExactMatch": "false",
+                    "doCreate": "true"
+                    }]
+},
+{
+    "entityName": "Case",
+    "showOnCreate": true,
+    "entityFieldMaps": [
+        {
+            "doCreate": true,
+            "doFind": false,
+            "fieldName": "Status",
+            "isExactMatch": false,
+            "label": "CaseStatus"
+        }]
+}];
+
+	
+	
 </script>
 	</body>
 </html>
